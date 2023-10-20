@@ -20,6 +20,7 @@ class DashboardController extends Controller
                 'password' =>$request->password,
             ];
 
+
             if (Auth::attempt($credentials)){
                 return redirect('/home')->with('success','Login Success');
             }

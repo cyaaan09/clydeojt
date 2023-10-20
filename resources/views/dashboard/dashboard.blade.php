@@ -110,20 +110,12 @@
         <div class="landing">
 
             <form class="box" method="POST" action="{{ route('dashboard') }}" >
-               @if (Session::has('error'))
-                    <div class="aler alert-danger" role="alert">
-                        {{ Session::get('error') }}
-                    </div>
-                    @endif
-                    @csrf
-                    <h1 style="color: rgb(0, 128, 107)" >Login here</h1>
-                    <input type="text" name="email" required placeholder="Email">
-                    <input type="password" name="password" required placeholder="Password">
-                    <Button type="submit" class="btn btn-primary" > login </Button>
-                </form>
-
-
-
+                @csrf
+                <h1 style="color: rgb(0, 128, 107)" >Login here</h1>
+                <input type="text" name="email" required placeholder="Email">
+                <input type="password" name="password" required placeholder="Password">
+                <Button type="submit" class="btn btn-primary" > login </Button>
+            </form>
         </div>
     </body>
     <footer>
